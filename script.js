@@ -4,8 +4,6 @@ let observer = new IntersectionObserver((start) => {
     start.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("vis");
-        } else {
-            entry.target.classList.remove("vis");
         };
   });
 }, {

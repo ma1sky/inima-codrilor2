@@ -305,6 +305,7 @@ h2 {
 }
 
 .container {
+    max-width: 1500px;
     padding: 0 200px;
     display: flex;
     flex-direction: column;
@@ -328,12 +329,13 @@ h2 {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 72px;
 }
 
 .col-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
@@ -470,7 +472,7 @@ main {
 .default-block {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 36px;
     align-items: center;
 }
 
@@ -511,7 +513,11 @@ main {
     margin-top: 88px;
 }
 
-.contacte {
+.contacte, .activitati {
+    margin-top: 136px;
+}
+
+.despre-noi {
     margin-top: 136px;
 }
 
@@ -552,6 +558,25 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 4px;
+}
+
+th {
+    background-color: var(--blue100);
+    color: var(--white100);
+    padding: 16px 16px;
+    border-radius: 16px;
+}
+
+td {
+    background-color: var(--blue10);
+    color: var(--dark100);
+    padding: 16px 16px;
+    border-radius: 16px;
 }
 
 .message {
@@ -622,7 +647,82 @@ main {
     gap: 52px;
     align-items: center;
 }
+
+.despre-noi{
+    margin-top: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.touristic-object {
+    max-width: 900px;
+}
+
+.touristic-objects .par-reg {
+    text-align: center;
+}
+
+
 /*-------- --------- Adaptive -------------------------*/
+
+@media(max-width: 850px) {
+
+    .par-reg,
+    .par-bold {
+        font-size: 16px;
+    }
+
+    .col-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1420px) {
+    .landing__wrapper {
+        padding-left: 36px;
+    }
+
+    .container {
+        padding: 0px 36px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .col-3 {
+        gap: 16px;
+    }
+
+    .col-2 {
+        gap: 16px;
+    }
+
+    .footer {
+        padding: 56px 36px;
+    }
+
+    .ps {
+        padding: 32px 36px;
+    }
+}
 
 @media(max-width: 1000px) {
     .hamb-menu{
@@ -669,3 +769,4 @@ main {
         height: 50vh;
     }
 }
+
