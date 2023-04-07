@@ -81,3 +81,35 @@ sliderCont.forEach(item => {
 
     checkButton();
 });
+
+let menuClose = document.querySelector('.menu__close');
+let menuOpen = document.querySelector('.menu__open');
+let menu = document.querySelector('.menu');
+
+menuOpen.onclick = () => {menu.classList.add('menu_active')};
+menuClose.onclick = () => { menu.classList.remove('menu_active') };
+
+//--------------- Menu dropdown list
+
+let menuDropDownList = document.querySelector(".menu__dropdown-list");
+
+let menuDropDownButton = document.querySelector(".menu__dropdown-button");
+
+let menuDropDownIcon = document.querySelector(".menu__dropdown-icon");
+
+menuDropDownButton.onclick = function () {
+    if (menuDropDownList.classList.contains("menu__dropdown-list_active")) {
+        menuDropDownList.classList.remove("menu__dropdown-list_active");
+        menuDropDownIcon.classList.remove("menu__dropdown-icon_active");
+    } else {
+        menuDropDownList.classList.add("menu__dropdown-list_active");
+        menuDropDownIcon.classList.add("menu__dropdown-icon_active");
+    }
+};
+
+window.onclick = function (event) {
+    if (!event.target.matches(".menu__dropdown-button")) {
+        menuDropDownList.classList.remove("menu__dropdown-list_active");
+        menuDropDownIcon.classList.remove("menu__dropdown-icon_active");
+    }
+}

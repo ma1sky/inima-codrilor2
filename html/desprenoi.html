@@ -9,15 +9,72 @@
     <meta name="description"
         content="Centrul de Instruire şi Agrement Ivancea este situat într-o zonă foarte pitorească în inima Codrilor Moldovei" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="logo/ms-icon-144x144.png" type="image/x-icon">
     <title>Inima Codrilor</title>
 </head>
 
 <body>
 
+    <header class="mobile-header">
+        <a href="index.html" class="header__logo"></a>
+        <button class="menu__open mobile-header__icon"><svg width="48" height="48" viewBox="0 0 48 48"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 36V33H42V36H6ZM6 25.5V22.5H42V25.5H6ZM6 15V12H42V15H6Z" fill="currentColor" />
+            </svg>
+        </button>
+        <div class="menu">
+
+            <ul class="menu__list">
+                <div class="menu__close mobile-header__icon nonvis">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.45 37.65L10.35 35.55L21.9 24L10.35 12.45L12.45 10.35L24 21.9L35.55 10.35L37.65 12.45L26.1 24L37.65 35.55L35.55 37.65L24 26.1L12.45 37.65Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <li class="menu__item nonvis">
+                    <button class="menu__dropdown-button menu__link"><svg class="menu__dropdown-icon" width="15"
+                            height="15" viewBox="0 0 24 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 14.75L0 2.74998L2.15 0.599976L12 10.5L21.85 0.649976L24 2.79998L12 14.75Z" />
+                        </svg>Servicii</button>
+                    <ul class="menu__dropdown-list">
+                        <li class="menu__dropdown-item menu__item"><a href="cazare.html" class="menu__link">Cazare</a>
+                        </li>
+                        <li class="menu__dropdown-item menu__item"><a href="restaurant.html"
+                                class="menu__link">Restaurant</a></li>
+                        <li class="menu__dropdown-item menu__item"><a href="salideconferenta.html"
+                                class="header__link">Sali
+                                de conferinţă</a></li>
+                        <li class="menu__dropdown-item menu__item"><a href="activitati.html"
+                                class="menu__link">Activitati</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item nonvis">
+                    <a href="desprenoi.html" class="header__link">Despre noi</a>
+                </li>
+                <li class="menu__item nonvis">
+                    <a href="evenimente.html" class="header__link">Evenimente</a>
+                </li>
+                <li class="menu__item nonvis">
+                    <a href="contacte.html" class="header__link">Contacte</a>
+                </li>
+                <button class="phone-button nonvis">
+                    <a href="tel:+37367300500" class="header__phone-button button-with-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.5679 9.77445C17.4832 7.76274 16.7299 6.05296 15.308 4.6451C13.886 3.23725 12.1509 2.49156 10.1026 2.40804V0.734741C11.3466 0.768149 12.5166 1.02761 13.6124 1.51313C14.7082 1.99862 15.6672 2.64935 16.4893 3.4653C17.3114 4.28125 17.9685 5.23008 18.4605 6.31179C18.9525 7.3935 19.2154 8.54772 19.2493 9.77445H17.5679ZM13.1044 9.77445C13.0197 8.98648 12.6979 8.31851 12.1389 7.77054C11.5799 7.22259 10.9011 6.90685 10.1026 6.82333V5.16418C11.3722 5.2477 12.4514 5.72613 13.3401 6.59946C14.2288 7.47278 14.7155 8.53112 14.8001 9.77445H13.1044ZM17.8063 19.7347C15.6933 19.7347 13.5959 19.2239 11.5142 18.2023C9.43258 17.1807 7.55945 15.8518 5.89484 14.2157C4.23023 12.5796 2.88051 10.7315 1.84568 8.6715C0.810865 6.61146 0.293457 4.54363 0.293457 2.468C0.293457 2.05413 0.436449 1.70609 0.722432 1.42388C1.00843 1.14168 1.36115 1.00058 1.78058 1.00058H5.33548C5.72855 1.00058 6.05867 1.11061 6.32583 1.33067C6.59297 1.55073 6.77107 1.86519 6.86013 2.27407L7.54572 5.20452C7.60828 5.56112 7.60269 5.87381 7.52893 6.14261C7.45518 6.41143 7.31026 6.6398 7.09417 6.82771L4.49754 9.27339C5.38811 10.6947 6.36694 11.9274 7.43404 12.9717C8.50114 14.0159 9.70234 14.9009 11.0376 15.6266L13.5217 13.1287C13.7675 12.8788 14.0363 12.7069 14.3282 12.6129C14.62 12.5188 14.9334 12.511 15.2682 12.5894L17.9885 13.2125C18.4008 13.3161 18.7214 13.5044 18.9502 13.7772C19.179 14.0501 19.2935 14.3909 19.2935 14.7998V18.2532C19.2935 18.6765 19.1505 19.0292 18.8645 19.3114C18.5785 19.5936 18.2258 19.7347 17.8063 19.7347ZM3.49178 7.49876L5.5342 5.54333L4.96453 2.98545H2.33369C2.31455 3.59 2.39916 4.25669 2.58754 4.98551C2.77591 5.71432 3.07733 6.55207 3.49178 7.49876ZM12.8902 16.6223C13.5364 16.9303 14.2443 17.1797 15.0138 17.3707C15.7832 17.5618 16.5345 17.6787 17.2676 17.7215V15.0972L14.8675 14.5852L12.8902 16.6223Z" />
+                        </svg>
+                        +(373) 67-300-500</a>
+                </button>
+            </ul>
+        </div>
+    </header>
+
     <header class="header">
-        <a href="../index.html" class="header__logo"></a>
+        <a href="index.html" class="header__logo"></a>
         <ul class="header__list">
             <li class="header__item">
 
@@ -26,35 +83,34 @@
                         <path d="M12 14.75L0 2.74998L2.15 0.599976L12 10.5L21.85 0.649976L24 2.79998L12 14.75Z" />
                     </svg>Servicii</button>
                 <ul class="header__dropdown-list">
-                    <li class="header__dropdown-item header__item"><a href="../html/cazare.html"
-                            class="header__link">Cazare</a></li>
-                    <li class="header__dropdown-item header__item"><a href="../html/restaurant.html"
+                    <li class="header__dropdown-item header__item"><a href="cazare.html" class="header__link">Cazare</a>
+                    </li>
+                    <li class="header__dropdown-item header__item"><a href="restaurant.html"
                             class="header__link">Restaurant</a></li>
-                    <li class="header__dropdown-item header__item"><a href="../html/salideconferenta.html"
-                            class="header__link">Sali de conferinţă</a></li>
-                    <li class="header__dropdown-item header__item"><a href="../html/Activitati.html"
+                    <li class="header__dropdown-item header__item"><a href="salideconferenta.html"
+                            class="header__link">Sali
+                            de conferinţă</a></li>
+                    <li class="header__dropdown-item header__item"><a href="activitati.html"
                             class="header__link">Activitati</a></li>
                 </ul>
                 </div>
             </li>
             <li class="header__item">
-                <a href="../html/desprenoi.html" class="header__link">Despre noi</a>
+                <a href="desprenoi.html" class="header__link">Despre noi</a>
             </li>
             <li class="header__item">
-                <a href="../html/evenimente.html" class="header__link">Evenimente</a>
+                <a href="evenimente.html" class="header__link">Evenimente</a>
             </li>
             <li class="header__item">
-                <a href="../html/contacte.html" class="header__link">Contacte</a>
+                <a href="contacte.html" class="header__link">Contacte</a>
             </li>
         </ul>
         <a href="tel:+37367300500" class="header__phone-button button-with-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M17.5679 9.77445C17.4832 7.76274 16.7299 6.05296 15.308 4.6451C13.886 3.23725 12.1509 2.49156 10.1026 2.40804V0.734741C11.3466 0.768149 12.5166 1.02761 13.6124 1.51313C14.7082 1.99862 15.6672 2.64935 16.4893 3.4653C17.3114 4.28125 17.9685 5.23008 18.4605 6.31179C18.9525 7.3935 19.2154 8.54772 19.2493 9.77445H17.5679ZM13.1044 9.77445C13.0197 8.98648 12.6979 8.31851 12.1389 7.77054C11.5799 7.22259 10.9011 6.90685 10.1026 6.82333V5.16418C11.3722 5.2477 12.4514 5.72613 13.3401 6.59946C14.2288 7.47278 14.7155 8.53112 14.8001 9.77445H13.1044ZM17.8063 19.7347C15.6933 19.7347 13.5959 19.2239 11.5142 18.2023C9.43258 17.1807 7.55945 15.8518 5.89484 14.2157C4.23023 12.5796 2.88051 10.7315 1.84568 8.6715C0.810865 6.61146 0.293457 4.54363 0.293457 2.468C0.293457 2.05413 0.436449 1.70609 0.722432 1.42388C1.00843 1.14168 1.36115 1.00058 1.78058 1.00058H5.33548C5.72855 1.00058 6.05867 1.11061 6.32583 1.33067C6.59297 1.55073 6.77107 1.86519 6.86013 2.27407L7.54572 5.20452C7.60828 5.56112 7.60269 5.87381 7.52893 6.14261C7.45518 6.41143 7.31026 6.6398 7.09417 6.82771L4.49754 9.27339C5.38811 10.6947 6.36694 11.9274 7.43404 12.9717C8.50114 14.0159 9.70234 14.9009 11.0376 15.6266L13.5217 13.1287C13.7675 12.8788 14.0363 12.7069 14.3282 12.6129C14.62 12.5188 14.9334 12.511 15.2682 12.5894L17.9885 13.2125C18.4008 13.3161 18.7214 13.5044 18.9502 13.7772C19.179 14.0501 19.2935 14.3909 19.2935 14.7998V18.2532C19.2935 18.6765 19.1505 19.0292 18.8645 19.3114C18.5785 19.5936 18.2258 19.7347 17.8063 19.7347ZM3.49178 7.49876L5.5342 5.54333L4.96453 2.98545H2.33369C2.31455 3.59 2.39916 4.25669 2.58754 4.98551C2.77591 5.71432 3.07733 6.55207 3.49178 7.49876ZM12.8902 16.6223C13.5364 16.9303 14.2443 17.1797 15.0138 17.3707C15.7832 17.5618 16.5345 17.6787 17.2676 17.7215V15.0972L14.8675 14.5852L12.8902 16.6223Z" />
-
             </svg>
             +(373) 67-300-500</a>
-
     </header>
     <main>
         <div class="container">
@@ -443,11 +499,11 @@
             <a href="mailto:inima.codrilor@gmail.com" class="footer__link">inima.codrilor@gmail.com</a>
         </div>
     </footer>
-    <p class="ps par-reg">Данный веб-сайт был выполнен в рамках конкурса «Юные послы „Теквилл”», организованного
-        проектом «„Теквилл” в
-        каждой школе» и не обязательно отражает мнение проекта.</p>
+    <p class="ps par-reg">Acest site web a fost realizat în cadrul concursului "Tinerii Ambasadori ai Tekwill",
+        organizat de proiectul "Tekwill
+        în fiecare școală" și nu reflectă neapărat opinia proiectului.</p>
 </body>
 
-<script src="../script.js"></script>
+<script src="../js/script.js"></script>
 
 </html>
